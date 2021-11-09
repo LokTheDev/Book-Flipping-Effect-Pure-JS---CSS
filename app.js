@@ -17,7 +17,7 @@ const start=()=>{
     prevBtn.style.opacity = 1
     nextBtn.style.opacity = 1
     document.querySelector("#p0").style.marginLeft = "70vw"
-    document.querySelector(`#p${currentPage}`).style.transform = "scale(0.8)";
+    document.querySelector(`#p${currentPage}`).style.transform = "rotateY(0deg)";
     document.querySelector("#b1").style.backgroundColor = "black"
     currentPage++
     scriptText.innerHTML = script[1]
@@ -27,8 +27,8 @@ const start=()=>{
 const nextPage=()=>{
     if(currentPage < 10){
         document.querySelector(`#p${currentPage}`).style.marginLeft = "70vw"
-        document.querySelector(`#p${currentPage}`).style.transform = "scale(0.7)";
         document.querySelector(`#b${currentPage+1}`).style.backgroundColor = "black"
+        document.querySelector(`#p${currentPage}`).style.transform = "rotateY(0deg)";
         currentPage++
         scriptText.innerHTML = script[currentPage]
 
@@ -39,8 +39,7 @@ const nextPage=()=>{
 
 const prevPage=()=>{
     if(currentPage > 0){
-        document.querySelector(`#p${currentPage-1}`).style.transform = "scale(1.0)";
-        //document.querySelector(`#p${currentPage-1}`).style.marginRight = "0vw"
+        document.querySelector(`#p${currentPage-1}`).style.transform = "rotateY(180deg)";
         document.querySelector(`#p${currentPage-1}`).style.marginLeft = "0vw"
         document.querySelector(`#b${currentPage}`).style.backgroundColor = "white"
         currentPage--
