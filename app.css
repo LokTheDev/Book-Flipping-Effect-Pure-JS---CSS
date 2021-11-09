@@ -1,0 +1,240 @@
+body{
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.progressNav, .vid, .scroll{
+    height: 100vh;
+}
+
+.progressNav{
+    width: 8%;
+    background-color: black;
+    position: relative;
+}
+
+.progressNav > h1{
+    font: bold 12px Sans-Serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 5px 10px;
+    margin: 0 0 10px 0;
+    line-height: 24px;
+}
+
+.footer > p{
+    position: absolute;
+    bottom: 0;
+    color: white;
+    font: 12px Sans-Serif;
+}
+
+.vid{
+    width: 30%;
+    position: relative;
+}
+
+.vid > video{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position:relative;
+    z-index:0;
+}
+
+.videoText{
+    position:absolute;
+    top: 35%;
+    left:0;
+    z-index:1;
+    color: white;
+    text-align: left;
+    font: bold 15px Sans-Serif;
+}
+
+.videoText > p::first-letter{
+    font-size: 150%;
+}
+
+.script,
+.scriptPic{
+    width: 35%;
+    overflow: hidden;
+    max-height: 100vh;
+}
+
+.scriptPic{
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    position:relative;
+}
+
+
+
+.scriptPic > img{
+    width: 100%;
+    height: 100vh;
+    transition: 3s;
+    position: absolute;
+}
+
+.script{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
+}
+
+.script > p{
+    position: absolute;
+    bottom: 20px;
+    font-size: 75%;
+}
+
+.btn-Option{
+    position: absolute;
+    bottom: 50px;
+}
+
+#prev-btn,
+#next-btn{
+    margin: 50px;
+    width: 150px;
+    opacity: 0;
+    transition: 1s;
+}
+
+
+#start-btn{
+    background-color: transparent;
+    opacity: 1;
+    transition: 0s;
+}
+
+.scriptContent{
+    text-align: left;
+    width: 250px;
+    word-wrap: break-word;
+    transition: 0.5s;
+    margin-top: 0%;
+}
+
+.scriptContent::first-letter{
+    font-size: 200%;
+    color: black;
+}
+
+.scriptContent:hover{
+    transform: scale(1.25);
+    transition: 0.5s;
+}
+
+/*Progress Bar*/
+.page{
+    position: absolute;
+    top: 10px;
+    border-radius: 10px;
+
+}
+
+
+.page > button{
+    transition: 1s;
+    margin-left:10px;
+    height: 5px;
+    width: 5px;
+    background-color: transparent;
+    border: none;
+}
+
+/*Img Stack*/
+#p0{
+    z-index:  10;
+}
+#p1{
+    z-index:  9;
+}
+#p2{
+    z-index:  8;
+}
+#p3{
+    z-index:  7;
+}
+#p4{
+    z-index:  6;
+}
+#p5{
+    z-index:  5;
+}
+#p6{
+    z-index:  4;
+}
+#p7{
+    z-index:  3;
+}
+#p8{
+    z-index:  2;
+}
+#p9{
+    z-index:  1;
+}
+#p10{
+    z-index:  0;
+}
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    body{
+        flex-direction: column;
+    }
+    .progressNav,
+    .vid,
+    .script,
+    .scriptContent{
+        width: 100%;
+        height: 100vh;
+    }
+
+    .scriptPic{
+        
+    }
+
+    .scriptContent{
+        text-align: center;
+        width: 99%;
+        transition: 0s;
+        margin-top: 50%;
+
+    }
+    
+    .scriptContent::first-letter{
+        font-size: 200%;
+        color: black;
+    }
+    
+    .scriptContent:hover{
+        transform: scale(1);
+        transition: 0s;
+    }
+
+    .btn-Option{
+        position: relative;
+    }
+    #prev-btn,
+    #next-btn{
+    margin-left: 0px;
+    margin-bottom: 50px;
+    width: 100px;
+    opacity: 0;
+    transition: 1s;
+}
+
+}
