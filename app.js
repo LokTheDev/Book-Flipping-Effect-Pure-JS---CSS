@@ -43,10 +43,8 @@ const prevPage=()=>{
         //document.querySelector(`#p${currentPage-1}`).style.marginRight = "0vw"
         document.querySelector(`#p${currentPage-1}`).style.marginLeft = "0vw"
         document.querySelector(`#b${currentPage}`).style.backgroundColor = "white"
-
         currentPage--
         scriptText.innerHTML = script[currentPage]
-        pageNum.innerHTML = `Page : ${currentPage}/10`
     }else{
         currentPage=0
     }
