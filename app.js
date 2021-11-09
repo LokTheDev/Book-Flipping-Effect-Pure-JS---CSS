@@ -91,8 +91,3 @@ const script = [
     Which never yet a living person left.`],
     [`End`],
 ]
-
-
-function test(){
-    document.querySelector("#p0").width = "1%"
-}

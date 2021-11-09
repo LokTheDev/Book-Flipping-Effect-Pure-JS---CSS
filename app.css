@@ -4,17 +4,17 @@ body{
     display: flex;
 }
 
-.progressNav, .vid, .scroll{
+.nav, .vid, .scroll{
     height: 100vh;
 }
 
-.progressNav{
+.nav{
     width: 8%;
     background-color: black;
     position: relative;
 }
 
-.progressNav > h1{
+.nav > h1{
     font: bold 12px Sans-Serif;
     letter-spacing: 2px;
     text-transform: uppercase;
